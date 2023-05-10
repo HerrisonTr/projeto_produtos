@@ -21,49 +21,54 @@ include "./config/conn.php"
                 <h1> PRODUTOS </h1>
             </div>
 
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvas_novoProduto" aria-controls="offCanvas_novoProduto">
-                <i class="fa-solid fa-cart-plus"></i> Cadastrar novo produto
-            </button>
 
-            <div class="table-responsive mt-3"> 
-                <table class="table table-bordered table-striped table-dark text-center"> 
-                    <thead> 
-                        <tr> 
-                            <th> # </th>
-                            <th> NOME </th>
-                            <th> MARCA </th>
-                            <th> TAMANHO </th>
-                            <th> EDITAR </th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody-produtos"> 
-                        <?php
-                        $sql = "select id, nome, marca, tamanho from produto order by id desc";
-                        $result = mysqli_query($con, $sql);
-                        if (mysqli_num_rows($result)) {
-                            while ($row = mysqli_fetch_array($result)) {
-                                ?>
+            <div class='card shadow-sm border'> 
+                <div class='card-body'>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvas_novoProduto" aria-controls="offCanvas_novoProduto">
+                        <i class="fa-solid fa-cart-plus"></i> Cadastrar novo produto
+                    </button>
 
-                                <tr>
-                                    <td> <?= $row[0] ?> </td>
-                                    <td> <?= $row[1] ?> </td>
-                                    <td> <?= $row[2] ?> </td>
-                                    <td> <?= $row[3] ?> </td>
-                                    <td> 
-                                        <button class="btn btn-warning edita-produto" data-id="<?= $row[0] ?>" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvas_editaProduto" aria-controls="offCanvas_editaProduto"> 
-                                            <i class="fa fa-edit"></i>
-                                        </button>
-                                    </td>
+                    <div class="table-responsive mt-3"> 
+                        <table class="table table-bordered table-striped table-dark text-center"> 
+                            <thead> 
+                                <tr> 
+                                    <th> # </th>
+                                    <th> NOME </th>
+                                    <th> MARCA </th>
+                                    <th> TAMANHO </th>
+                                    <th> EDITAR </th>
                                 </tr>
-
+                            </thead>
+                            <tbody id="tbody-produtos"> 
                                 <?php
-                            }
-                        } else {
-                            echo "<tr> <td colspan='4'> Nenhum item cadastrado até o momento <td> </tr>";
-                        }
-                        ?>
-                    </tbody>
-                </table>
+                                $sql = "select id, nome, marca, tamanho from produto order by id desc";
+                                $result = mysqli_query($con, $sql);
+                                if (mysqli_num_rows($result)) {
+                                    while ($row = mysqli_fetch_array($result)) {
+                                        ?>
+
+                                        <tr>
+                                            <td> <?= $row[0] ?> </td>
+                                            <td> <?= $row[1] ?> </td>
+                                            <td> <?= $row[2] ?> </td>
+                                            <td> <?= $row[3] ?> </td>
+                                            <td> 
+                                                <button class="btn btn-warning edita-produto" data-id="<?= $row[0] ?>" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvas_editaProduto" aria-controls="offCanvas_editaProduto"> 
+                                                    <i class="fa fa-edit"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <?php
+                                    }
+                                } else {
+                                    echo "<tr> <td colspan='4'> Nenhum item cadastrado até o momento <td> </tr>";
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
 

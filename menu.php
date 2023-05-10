@@ -4,6 +4,7 @@
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="inicio.php" class="nav-link text-white link-menu"> Produtos </a></li>
                 <li><a href="estabelecimentos.php" class="nav-link text-white link-menu"> Estabelecimentos </a></li>
+                <li><a href="produtoEstabelecimento.php" class="nav-link text-white link-menu"> Produto X Estabelecimento </a></li>
             </ul>
 
             <div class="text-end">
