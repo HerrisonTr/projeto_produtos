@@ -4,7 +4,7 @@ try {
     $host = 'localhost';
     $user = 'root';
     $password = '';
-    $dbname = 'produtos_mercado';
+    $dbname = 'produtos_mercado_herrison';
 
     $con = mysqli_connect($host, $user, $password, $dbname);
     $sql = "SET NAMES 'utf8'";

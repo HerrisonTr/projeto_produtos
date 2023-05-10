@@ -8,7 +8,7 @@ include "./include/functions.php"
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> Inicio </title>
+        <title> Produto X Estabelecimentos </title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     </head>
@@ -54,10 +54,10 @@ include "./include/functions.php"
                                     <select class='form-select input-formulario' name='produto' id="produto"> 
                                         <option selected disabled> Selecione um produto </option>
                                         <?php
-                                        $sqlProduto = "select id, nome from produto";
+                                        $sqlProduto = "select id, nome, marca from produto";
                                         $resultProduto = mysqli_query($con, $sqlProduto);
                                         while ($rowProduto = mysqli_fetch_array($resultProduto)) {
-                                            echo "<option value='$rowProduto[0]'> $rowProduto[1] </option>";
+                                            echo "<option value='$rowProduto[0]'> $rowProduto[1] - $rowProduto[2] </option>";
                                         }
                                         ?>
                                     </select>
