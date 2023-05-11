@@ -19,7 +19,7 @@ include "./include/functions.php"
 
         <div class="container"> 
             <div class="titulo">
-                <h1> Produtos X Estabelecimentos </h1>
+                <h1> PRODUTOS POR ESTABELECIMENTOS </h1>
             </div>
 
             <div class='row'> 

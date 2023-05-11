@@ -5,6 +5,7 @@
                 <li><a href="inicio.php" class="nav-link text-white link-menu"> Produtos </a></li>
                 <li><a href="estabelecimentos.php" class="nav-link text-white link-menu"> Estabelecimentos </a></li>
                 <li><a href="produtoEstabelecimento.php" class="nav-link text-white link-menu"> Produto X Estabelecimento </a></li>
+                <li><a href="pesquisa.php" class="nav-link text-white link-menu"> Pesquisa de preços </a></li>
             </ul>
 
             <div class="text-end">

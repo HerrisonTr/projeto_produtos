@@ -18,7 +18,7 @@ include "./config/conn.php"
 
         <div class="container"> 
             <div class="titulo">
-                <h1> Estabelecimento </h1>
+                <h1> ESTABELECIMENTO </h1>
             </div>
 
             <div class='card shadow-sm border'> 
