@@ -22,7 +22,7 @@ if (mysqli_num_rows($result)) {
             <td> <?= $row[2] ?> </td>
             <td> <?= implode(", ", $endereco) ?> </td>
             <td> 
-                <button class="btn btn-warning edita-produto" data-id="<?= $row[0] ?>" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvas_editaProduto" aria-controls="offCanvas_editaProduto"> 
+                <button class="btn btn-warning edita-estabelecimentos" data-id="<?= $row[0] ?>" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvas_editaProduto" aria-controls="offCanvas_editaProduto"> 
                     <i class="fa fa-edit"></i>
                 </button>
             </td>
